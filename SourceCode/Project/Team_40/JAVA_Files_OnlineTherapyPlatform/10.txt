@@ -1,0 +1,79 @@
+10.Review
+//Review.java
+
+import java.util.Date;
+public class Review {
+    private int reviewID; // Primary Key
+    private int therapistID; // Foreign Key
+    private int patientID; // Foreign Key
+    private int sessionID; // Foreign Key
+    private int rating;
+    private String reviewContent;
+    private Date date;
+// Constructor
+    public Review(int reviewID, int therapistID, int patientID, int sessionID, int rating, String reviewContent, Date date) {
+        this.reviewID = reviewID;
+        this.therapistID = therapistID;
+        this.patientID = patientID;
+        this.sessionID = sessionID;
+        this.rating = rating;
+        this.reviewContent = reviewContent;
+        this.date = date;
+    }
+    // Getter and Setter methods
+    public int getReviewID() {
+        return reviewID;
+    }
+    public void setReviewID(int reviewID) {
+        this.reviewID = reviewID;
+    }
+    public int getTherapistID() {
+        return therapistID;
+    }
+    public void setTherapistID(int therapistID) {
+        this.therapistID = therapistID;
+    }
+    public int getPatientID() {
+        return patientID;
+    }
+    public void setPatientID(int patientID) {
+        this.patientID = patientID;
+    }
+    public int getSessionID() {
+        return sessionID;
+    }
+    public void setSessionID(int sessionID) {
+        this.sessionID = sessionID;
+    }
+    public int getRating() {
+        return rating;
+    }
+
+    public void setRating(int rating) {
+        this.rating = rating;
+    }
+    public String getReviewContent() {
+        return reviewContent;
+    }
+    public void setReviewContent(String reviewContent) {
+        this.reviewContent = reviewContent;
+    }
+    public Date getDate() {
+        return date;
+    }
+    public void setDate(Date date) {
+        this.date = date;
+    }
+    @Override
+    public String toString() {
+        return "Review{" +
+                "reviewID=" + reviewID +
+                ", therapistID=" + therapistID +
+                ", patientID=" + patientID +
+                ", sessionID=" + sessionID +
+                ", rating=" + rating +
+                ", reviewContent='" + reviewContent + '\'' +
+                ", date=" + date +
+                '}';
+    }
+}

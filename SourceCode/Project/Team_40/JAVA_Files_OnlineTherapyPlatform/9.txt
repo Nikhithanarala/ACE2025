@@ -1,0 +1,61 @@
+9.Messaging
+//Messaging.java
+
+import java.util.Date;
+
+public class Messaging {
+    private int messageID; // Primary Key
+    private int senderID; // Foreign Key
+    private int receiverID; // Foreign Key
+    private String messageContent;
+    private Date timestamp;
+
+    // Constructor
+    public Messaging(int messageID, int senderID, int receiverID, String messageContent, Date timestamp) {
+        this.messageID = messageID;
+        this.senderID = senderID;
+        this.receiverID = receiverID;
+        this.messageContent = messageContent;
+        this.timestamp = timestamp;
+    }
+    // Getter and Setter methods
+    public int getMessageID() {
+        return messageID;
+    }
+    public void setMessageID(int messageID) {
+        this.messageID = messageID;
+    }
+    public int getSenderID() {
+        return senderID;
+    }
+    public void setSenderID(int senderID) {
+        this.senderID = senderID;
+    }
+    public int getReceiverID() {
+        return receiverID;
+    }
+    public void setReceiverID(int receiverID) {
+        this.receiverID = receiverID;
+    }
+    public String getMessageContent() {
+        return messageContent;
+    }
+    public void setMessageContent(String messageContent) {
+        this.messageContent = messageContent;
+    }
+    public Date getTimestamp() {
+        return timestamp;
+    }
+    public void setTimestamp(Date timestamp) {
+        this.timestamp = timestamp;
+    }
+    @Override
+    public String toString() {
+        return "Messaging{" +
+                "messageID=" + messageID +
+                ", senderID=" + senderID +
+                ", receiverID=" + receiverID +
+                ", messageContent='" + messageContent + '\'' +
+                ", timestamp=" + timestamp +
+                '}';
+    }} 

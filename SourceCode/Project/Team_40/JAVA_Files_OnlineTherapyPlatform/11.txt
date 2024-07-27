@@ -1,0 +1,47 @@
+11.Main
+//Main.java
+
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+public class Main {
+    public static void main(String[] args) {
+        // Creating instances of entities
+        Therapist therapist1 = new Therapist(1, "John Doe", "Psychologist", "Monday, Wednesday, Friday");
+        Patient patient1 = new Patient(1, "Alice Smith", "alice@example.com", 30, "Female");
+        Session session1 = new Session(1, 1, 1, new Date(), new Date(), "Individual");
+        Appointment appointment1 = new Appointment(1, 1, 1, 1, new Date(), "10:00 AM", "Confirmed");
+        Prescription prescription1 = new Prescription(1, 1, 1, "Medicine X", "10mg", "Twice daily");
+        Profile profile1 = new Profile(1, "Therapist", "john_doe", "john@example.com", "password123");
+        Review review1 = new Review(1, 1, 1, 1, 5, "Great session!", new Date());
+
+        // Creating a list of appointments
+        List<Appointment> appointments = new ArrayList<>();
+        appointments.add(appointment1);
+
+        // Creating a list of prescriptions
+        List<Prescription> prescriptions = new ArrayList<>();
+        prescriptions.add(prescription1);
+
+        // Creating a list of reviews
+        List<Review> reviews = new ArrayList<>();
+        reviews.add(review1);
+
+        // Printing details
+        System.out.println("Therapist: " + therapist1);
+        System.out.println("Patient: " + patient1);
+        System.out.println("Session: " + session1);
+        System.out.println("Appointments: ");
+        for (Appointment appointment : appointments) {
+            System.out.println(appointment);
+        }
+        System.out.println("Prescriptions: ");
+        for (Prescription prescription : prescriptions) {
+            System.out.println(prescription);
+        }
+        System.out.println("Profile: " + profile1);
+        System.out.println("Reviews: ");
+        for (Review review : reviews) {
+            System.out.println(review);
+        }
+    }

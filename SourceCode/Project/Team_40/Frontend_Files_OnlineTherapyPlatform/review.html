@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Therapy Platform - Reviews</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(15deg, pink, white);
+            margin: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: white;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .review {
+            border-bottom: 1px solid #ddd;
+            padding: 10px 0;
+        }
+       
+        
+        
+        
+        .review-form input,
+        .review-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .review-form button {
+            background-color: pink;
+            color:black;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Therapy Platform Reviews</h1>
+        <div class="reviews">
+        </div>
+        <div class="review-form">
+            <h2>Leave a Review</h2>
+            <form id="reviewForm">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <textarea name="review" placeholder="Your Review" rows="5" required></textarea>
+                <button type="submit">Submit Review</button>
+            </form>
+        </div>
+    </div>
+    <script>
+        document.getElementById('reviewForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            window.location.href = 'thanku.html';
+        });
+    </script>
+</body>
+</html>
